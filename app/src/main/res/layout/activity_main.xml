@@ -44,6 +44,7 @@
                 android:id="@+id/button_clear"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
+
                 style="@style/Button_style"
                 android:text="C"/>
             <android.support.v7.widget.AppCompatButton
@@ -161,8 +162,13 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 style="@style/Button_style"
-                android:layout_weight="1"
                 android:text="="/>
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/button_BMI"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                style="@style/Button_style"
+                android:text="BMI"/>
 
         </TableRow>
 
