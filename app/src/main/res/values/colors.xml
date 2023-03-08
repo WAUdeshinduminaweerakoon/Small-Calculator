@@ -13,4 +13,11 @@
     <color name="green">#1CE11C</color>
     <color name="red">#e60000</color>
     <color name="purple">#8f00b3</color>
+
+    <color name="BMICalculator_Layout_background">#011959</color>
+    <color name="BMICalculator_card_background">#FF000000</color>
+    <color name="BMICalculator_text_hint">#FFFFFFFF</color>
+    <color name="BMICalculator_Item_Color">#FFFFFFFF</color>
+
+
 </resources>

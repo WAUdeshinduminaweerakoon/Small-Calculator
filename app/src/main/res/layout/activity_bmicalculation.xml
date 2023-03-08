@@ -4,33 +4,99 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/window_background"
+    android:background="@color/BMICalculator_Layout_background"
+    android:padding="16dp"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="bottom"
-        android:background="@color/io_background"
-        android:padding="30dp"
-        android:orientation="vertical">
-        <TableLayout
+    android:id="@+id/BMICalculation_name"
+    tools:context=".BMICalculation">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:stretchColumns="*">
+            android:orientation="vertical"
+            android:layout_marginBottom="88dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/main_text"
+                        android:text="Your Health"
+                        android:textSize="25sp"
+                        android:textColor="@color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_Result"
+                    android:text="Calculate your BMI"
+                    android:textSize="25sp"
+                   android:layout_marginTop="52sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_msg"
+                        android:text="You're Healthy"
+                        android:textSize="25sp"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="14dp"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <TableRow>
+        </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/edtWeight"
+                    android:hint="Weight(in Kg)"
+                    android:inputType="number"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/edtHeightFt"
+                            android:layout_weight="1"
+                            android:hint="Height(in Feet)"
+                            android:layout_marginRight="11dp"
+                            android:inputType="number"/>
+
+                        <EditText
+                            android:id="@+id/edtHeightIn"
+                            android:layout_width="18dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11dp"
+                            android:layout_weight="1"
+                            android:hint="Height(in Inch)"
+                            android:inputType="number" />
+
+
+                </LinearLayout>
+        </LinearLayout>
+
+
+<android.support.v7.widget.AppCompatButton
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:text="Calculate"
+    android:layout_marginTop="70dp"/>
+
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/button_Calculator"
             android:layout_width="0dp"
             android:layout_height="90dp"
             style="@style/Button_style"
-            android:text="Calculator"/>
-        </TableRow>
-        </TableLayout>
+            android:text="Calculator"
+            ></android.support.v7.widget.AppCompatButton>
 
-
-    </LinearLayout>
 </LinearLayout>
+
+
+
+
+
