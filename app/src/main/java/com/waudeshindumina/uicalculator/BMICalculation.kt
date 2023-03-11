@@ -12,6 +12,7 @@ private fun Nothing?.setOnClickListener(function: () -> Unit) {
 
 }
 
+@Suppress("DEPRECATION")
 class BMICalculation : AppCompatActivity() {
     @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,20 +38,20 @@ class BMICalculation : AppCompatActivity() {
 
                 if (bmi>25){
 
-                        Toast.makeText(this@BMICalculation, R.string.strOverWt, Toast.LENGTH_LONG).show();
-
-
-                    text_msg.text= resources.getString(R.string.strOverWt)
+                        Toast.makeText(this@BMICalculation, R.string.StrOverWt, Toast.LENGTH_LONG).show();
+                        text_msg.text= resources.getString(R.string.StUnderWt )
+                        BMICalculation_name.setBackgroundColor(resources.getColor(R.color.BMIColorRed))
                 }
                   else if (bmi<18) {
                     Toast.makeText(this@BMICalculation,R.string.StUnderWt,Toast.LENGTH_LONG).show();
-
                     text_msg.text= resources.getString(R.string.StUnderWt)
+                    BMICalculation_name.setBackgroundColor(resources.getColor(R.color.BMIColorYellow))
 
                   }
               }else{
-                Toast.makeText(this@BMICalculation,"Please fill ip all the required ",Toast.LENGTH_LONG).show();
-              }
+                  Toast.makeText(this@BMICalculation,R.string.StrHealthyWt,Toast.LENGTH_LONG).show();
+                  text_msg.text= resources.getString(R.string.StrHealthyWt)}
+                  BMICalculation_name.setBackgroundColor(resources.getColor(R.color.BMIColorGreen))
           }
         var button_Calculator = findViewById<Button>(R.id.button_Calculator)
             button_Calculator.setOnClickListener {
