@@ -1,7 +1,6 @@
 package com.waudeshindumina.uicalculator
 
 import android.annotation.SuppressLint
-import kotlinx.android.parcel.Parcelize
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -32,11 +31,23 @@ class BMICalculation : AppCompatActivity() {
 
                 val bmi = wt/(totalM*totalM  )
 
-                if (bmi>25){
-                    Toast.makeText(this@BMICalculation,"You're OverWeight",Toast.LENGTH_LONG).show();
+                  main_text.text = "Your BMI"
+                  text_Result.text= "{bmi.toInt()}"
 
-                    main_text.text = "Your BMI"
+
+                if (bmi>25){
+
+                        Toast.makeText(this@BMICalculation, R.string.strOverWt, Toast.LENGTH_LONG).show();
+
+
+                    text_msg.text= resources.getString(R.string.strOverWt)
                 }
+                  else if (bmi<18) {
+                    Toast.makeText(this@BMICalculation,R.string.StUnderWt,Toast.LENGTH_LONG).show();
+
+                    text_msg.text= resources.getString(R.string.StUnderWt)
+
+                  }
               }else{
                 Toast.makeText(this@BMICalculation,"Please fill ip all the required ",Toast.LENGTH_LONG).show();
               }

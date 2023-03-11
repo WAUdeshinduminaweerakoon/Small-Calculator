@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">UICalculator</string>
+    <string name="strOverWt" />
+    <string name="StUnderWt" />
+
+    <String name = "strOverWt">You\'re OverWeight</String>
+    <String name = "StrUnderWt">You\'re UnderWeight</String>
+    <String name = "StrHealthyWt">You\'re Healthy</String>
+
+
 </resources>
