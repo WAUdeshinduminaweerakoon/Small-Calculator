@@ -39,7 +39,7 @@ class BMICalculation : AppCompatActivity() {
                 if (bmi>25){
 
                         Toast.makeText(this@BMICalculation, R.string.StrOverWt, Toast.LENGTH_LONG).show();
-                        text_msg.text= resources.getString(R.string.StUnderWt )
+                        text_msg.text= resources.getString(R.string.StrOverWt )
                         BMICalculation_name.setBackgroundColor(resources.getColor(R.color.BMIColorRed))
                 }
                   else if (bmi<18) {
@@ -48,11 +48,16 @@ class BMICalculation : AppCompatActivity() {
                     BMICalculation_name.setBackgroundColor(resources.getColor(R.color.BMIColorYellow))
 
                   }
-              }else{
+              else{
                   Toast.makeText(this@BMICalculation,R.string.StrHealthyWt,Toast.LENGTH_LONG).show();
                   text_msg.text= resources.getString(R.string.StrHealthyWt)}
                   BMICalculation_name.setBackgroundColor(resources.getColor(R.color.BMIColorGreen))
           }
+        else{
+                  Toast.makeText(this@BMICalculation,"Please Fill ip all the required ",Toast.LENGTH_LONG).show();
+              }
+
+        }
         var button_Calculator = findViewById<Button>(R.id.button_Calculator)
             button_Calculator.setOnClickListener {
                 val intent2 = Intent(this, MainActivity::class.java)
